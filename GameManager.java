@@ -17,38 +17,44 @@ public class GameManager {
 
     // (Inputクラス担当) デバッグログ出力
     public static void log(String iText) {
-        if (sDebugMode) {
+        if (sDebugMode == true) {
             System.out.println("[DEBUG] " + iText);
         }
     }
 
     // (Judgeクラス担当) 手の名前を取得する関数
     public static String handName(int iHand) {
+        String oStr;
         switch (iHand) {
             case 0: {
-                return "グー";
+                oStr = "グー";
+                break;
             }
             case 1: {
-                return "チョキ";
+                oStr = "チョキ";
+                break;
             }
             case 2: {
-                return "パー";
+                oStr = "パー";
+                break;
             }
             default: {
-                return "不明";
+                oStr = "不明";
             }
         }
+        return oStr;
     }
 
     // (Mainクラス担当) 勝敗メッセージ生成関数
     public static String makeResultMessage(String iName, boolean iWin, boolean iDraw) {
-        if (iDraw) {
-            return "あいこです。";
+        String oStr = iName + " の負け。";
+        if (iDraw == true) {
+            oStr = "あいこです。";
         }
-        if (iWin) {
-            return iName + " の勝ち！";
+        if (iWin == true) {
+            oStr = iName + " の勝ち！";
         }
-        return iName + " の負け。";
+        return oStr;
     }
 
     // (Playerクラス担当) 終了処理や再戦確認など（例）

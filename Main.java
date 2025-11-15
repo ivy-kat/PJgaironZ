@@ -14,7 +14,7 @@ public class Main{
         Player.chooseHands();
 
         // 勝敗判定
-        String result=Judge.judgeResult(Player.sHands[0], Player.sHands[1]);
+        String result = Judge.judgeResult(Player.sHands[0], Player.sHands[1]);
         // 結果表示
         Display.showResult(result);
         // 終了処理

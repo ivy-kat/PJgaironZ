@@ -10,7 +10,7 @@ public class Player {
     // プレイヤーの手を選択するメソッド
     public static void chooseHands() {
         for(int i = 0; i < sNames.length; i++) {
-            sHands[i]=Input.getHiddenInput(sNames[i]);
+            sHands[i] = Input.getHiddenInput(sNames[i]);
         }
     }
 }
