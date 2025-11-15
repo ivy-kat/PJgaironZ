@@ -1,3 +1,7 @@
+/**
+ * GameManagerクラス
+ * ゲーム全体の管理を担当
+ */
 public class GameManager {
 
     // 共通のグローバル変数
