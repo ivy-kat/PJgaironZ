@@ -8,6 +8,7 @@ public class Input {
         Console tConsole = System.console();
         String tInput;
 
+        // コンソールが利用できない場合は通常の入力にフォールバック
         if (tConsole == null) {
             System.out.print(iPlayerName + " の手を入力してください (0:グー, 1:チョキ, 2:パー): ");
             tInput = new Scanner(System.in).nextLine();

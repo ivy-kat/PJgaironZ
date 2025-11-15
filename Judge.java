@@ -1,4 +1,5 @@
 public class Judge {
+    // 勝敗判定メソッド
     public static String judgeResult(int iHand1, int iHand2) {
         if (iHand1 == iHand2) {     // あいこ
             return GameManager.makeResultMessage("", false, true);

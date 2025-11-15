@@ -1,4 +1,5 @@
 public class Display {
+    // 結果表示メソッド
     public static void showResult(String iResult) {
         System.out.println("==== 結果発表 ====");
         System.out.println(Player.sNames[0] + "：" + GameManager.handName(Player.sHands[0]));
