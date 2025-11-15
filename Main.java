@@ -6,7 +6,7 @@ public class Main{
 
         Player.chooseHands();
 
-        String result=Judge.judgeResult(Player.hands[0],Player.hands[1]); // 配列handsがPlayerクラスでサイズ1なので例外発生
+        String result=Judge.judgeResult(Player.hands[0], Player.hands[1]);
         Display.showResult(result);
 
         GameManager.endGame();
