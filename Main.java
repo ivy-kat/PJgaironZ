@@ -6,7 +6,7 @@ public class Main{
 
         Player.chooseHands();
 
-        String result=Judge.judgeResult(Player.hands[0], Player.hands[1]);
+        String result=Judge.judgeResult(Player.sHands[0], Player.sHands[1]);
         Display.showResult(result);
 
         GameManager.endGame();
