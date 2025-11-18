@@ -20,10 +20,15 @@ public class Input {
             tInput = new String(tChars);
         }
 
-        //TODO: 範囲checkをしていないので修正する必要がある
-        try{
-            return Integer.parseInt(tInput.trim());
-        }catch(NumberFormatException e){
+        //20251118片岡 入力範囲のcheck機能を追加
+        try {
+            int tHand = Integer.parseInt(tInput.trim());
+            if(tHand < 0 || tHand > 2) {
+                System.out.println("範囲外の数字です。0〜2の数字を入力してください。");
+                return getHiddenInput(iPlayerName);
+            }
+            return tHand;
+        } catch(NumberFormatException e) {
             System.out.println("入力が無効です。0〜2の数字を入力してください。");
             return getHiddenInput(iPlayerName);
         }
